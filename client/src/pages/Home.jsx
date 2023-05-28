@@ -50,10 +50,15 @@ const Home = () => {
                     <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3 ">
                         {searchText ? (
                             <RenderedCards 
-                                data="searchedResults"
-                                
+                                data={[]}
+                                title="No search results found"
                             />
-                        ):()}
+                        ):(
+                            <RenderedCards 
+                                data={[]}
+                                title="No posts found"
+                            />
+                        )}
                     </div>
                 </>
             )}
