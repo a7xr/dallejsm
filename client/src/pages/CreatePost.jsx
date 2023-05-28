@@ -12,7 +12,7 @@ const CreatePost = () => {
     prompt: '',
     photo: ''
   })
-  const [generatingImg, setGeneratingImg] = useState(false)
+  const [generatingImg, setGeneratingImg] = useState(true)
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = () => {
@@ -67,6 +67,11 @@ const CreatePost = () => {
                         <img src={preview} alt="preview" 
                             className='w-9/12 h-9/12 object-contain opac'
                         />
+                    )}
+                    {generatingImg && (
+                        <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+                            <Loader />
+                        </div>
                     )}
                 </div>
             </div>
