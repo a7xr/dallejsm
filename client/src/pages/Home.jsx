@@ -9,7 +9,7 @@ const RenderedCards = ({data, title}) => {
 
     return (
         <h2 className="mt-5 font-bold text-[#6449ff] text-xl uppercase">
-            {title} title
+            {title}
         </h2>
     )
 }
@@ -18,7 +18,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
 
-  const [searchText, setSearchText] = useState('abc');
+  const [searchText, setSearchText] = useState('');
 
   return (
     <section className="max-w-7x1 mx-auto">
