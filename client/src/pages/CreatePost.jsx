@@ -88,6 +88,18 @@ const CreatePost = () => {
                     {generatingImg ? 'Generating ... ': 'Generate'}
                 </button>
             </div>
+            <div className="mt-10">
+                <p className="mt-2 text-[#666e75]">
+                    Once you have created the image you want, you can share it with the community
+                </p>
+                <button 
+                    type="submit"
+                    className="x"
+                >
+                    {loading ? 'Sharing ...' : 'Share with the community'}
+
+                </button>
+            </div>
         </form>
     </section>
   )
