@@ -12,6 +12,13 @@ const App = () => {
             <Link to="/">
                 <img src={logo} alt="logo" srcset="" className='w-28 object-contain' />
             </Link>
+
+            <Link 
+                className='font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md'
+                to="/create-post"
+            >
+                Create   
+            </Link>
         </header>
     </BrowserRouter>
   )
