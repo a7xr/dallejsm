@@ -12,3 +12,9 @@ app.get("/", async (req, res) => {
   res.send("Hello world");
 });
 
+const startServer = async () => {
+  app.listen(8080, () =>
+    console.log("Server started on http://localhost:8080")
+  );
+};
+startServer();
