@@ -39,7 +39,7 @@ const CreatePost = () => {
   }
 
   const handleSubmit = async() => {
-
+    
   }
 
   const handleChange = (e) => {
