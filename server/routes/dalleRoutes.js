@@ -16,4 +16,11 @@ router.route("/").get((req, res) => {
   res.send("Hello from dallE");
 });
 
+router.route("/").post(async (req, res) => {
+  try {
+    const { prompt } = req.body;
+    const aiResponse = await openai.createImage()
+  } catch (error) {}
+});
+
 export default router;
