@@ -15,13 +15,17 @@ cloudinary.config({
 });
 
 // Get all Posts
-router.route('/').get(async (req, res) => {
-     
-})
+router.route("/").get(async (req, res) => {});
 
 // Create a Posts
-router.route('/').post(async (req, res) => {
-     
-})
+router.route("/").post(async (req, res) => {
+  const { name, prompt, photo } = req.body;
+  const photoUrl = cloudinary.uploader.upload(photo);
+  const newPost = await Post.create({
+    name,
+    prompt,
+    photo: photoUrl.url,
+  });
+});
 
 export default router;
