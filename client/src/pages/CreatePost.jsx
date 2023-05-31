@@ -50,6 +50,7 @@ const CreatePost = () => {
                 },
                 body: JSON.stringify(form)
             })
+            await response.json()
         } catch (error) {
             
         }
