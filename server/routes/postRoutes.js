@@ -14,4 +14,14 @@ cloudinary.config({
   secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+// Get all Posts
+router.route('/').get(async (req, res) => {
+     
+})
+
+// Create a Posts
+router.route('/').post(async (req, res) => {
+     
+})
+
 export default router;
