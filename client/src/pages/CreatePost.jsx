@@ -38,7 +38,7 @@ const CreatePost = () => {
     }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
 
   }
 
