@@ -30,6 +30,9 @@ const Home = () => {
                     'Content-type': 'application/json'
                 }
             })
+            if(response.ok) {
+                
+            }
         } catch (error) {
             
         }finally{
