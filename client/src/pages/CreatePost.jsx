@@ -53,7 +53,9 @@ const CreatePost = () => {
             await response.json()
             navigate('/')
         } catch (error) {
-            
+            alert(err)
+        }finally{
+            setLoading(false)
         }
     }
   }
