@@ -40,6 +40,7 @@ const Home = () => {
             setLoading(false)
         }
     }
+    fetchPosts();
   }, []);
 
   return (
