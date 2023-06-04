@@ -41,8 +41,11 @@ const CreatePost = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     if(form.prompt && form.photo){
+        alert('fn_handleSubmit_firstIf')
         setLoading(true)
         try {
+
+            alert('fn_handleSubmit_atTry')
             const response = await fetch('http://localhost:8080/api/v1/post',{
                 method: 'POST',
                 headers: {
@@ -53,12 +56,15 @@ const CreatePost = () => {
             await response.json()
             navigate('/')
         } catch (error) {
+            alert('fn_handleSubmit_atError')
             alert(err)
         }finally{
+            alert('fn_handleSubmit_atFinally')
             setLoading(false)
         }
     }else{
         alert('Please enter a prompt and generate an image')
+        alert('fn_handleSubmit_atElse')
     }
   }
 
